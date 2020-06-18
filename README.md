@@ -1,2 +1,2 @@
-# Anoreplier
- AN auto reply SMS chat app
+# AnoReplier
+ An Android auto SMS replier app
