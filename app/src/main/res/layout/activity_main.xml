@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#202020"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/messagearea"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="28dp"
+        android:background="#232323"
+        android:ems="10"
+        android:gravity="start|top"
+        android:hint="Type Auto Reply Message Here"
+        android:inputType="textMultiLine"
+        android:textColor="#29B6F6"
+        android:textColorHighlight="#FB8C00"
+        android:textColorHint="#00897B"
+        app:layout_constraintBottom_toTopOf="@+id/servicebutton"
+        app:layout_constraintEnd_toEndOf="@+id/msglabel"
+        app:layout_constraintStart_toStartOf="@+id/msglabel"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/submit"
+        android:layout_width="144dp"
+        android:layout_height="wrap_content"
+        android:background="#AB47BC"
+        android:text="SET"
+        app:layout_constraintBottom_toBottomOf="@+id/servicebutton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/servicebutton"
+        app:layout_constraintTop_toTopOf="@+id/servicebutton" />
+
+    <TextView
+        android:id="@+id/messageDisplay"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="28dp"
+        android:background="#232323"
+        android:textColor="#46ACFF"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/servicebutton" />
+
+    <TextView
+        android:id="@+id/totalRepliesdisplay"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="180dp"
+        android:background="#252525"
+        android:textColor="#EC407A"
+        android:textSize="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView2"
+        app:layout_constraintTop_toTopOf="@+id/textView2" />
+
+    <TextView
+        android:id="@+id/msglabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:background="#232323"
+        android:text="Current Message:"
+        android:textColor="#43A047"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/messageDisplay"
+        app:layout_constraintEnd_toEndOf="@+id/messageDisplay"
+        app:layout_constraintStart_toStartOf="@+id/messageDisplay" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="20dp"
+        android:text="Total Replies:"
+        android:textColor="#43A047"
+        android:textSize="17dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/totalRepliesdisplay"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/messageDisplay" />
+
+    <ToggleButton
+        android:id="@+id/servicebutton"
+        android:layout_width="144dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="107dp"
+        android:background="#EF5350"
+        android:checked="false"
+        android:text="ToggleButton"
+        android:textOff="Not Running"
+        android:textOn="Running"
+        app:layout_constraintBottom_toTopOf="@+id/messageDisplay"
+        app:layout_constraintEnd_toStartOf="@+id/submit"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/messagearea" />
+</androidx.constraintlayout.widget.ConstraintLayout>
